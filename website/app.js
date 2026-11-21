@@ -59,7 +59,7 @@ $('processBtn').addEventListener('click', async () => {
       const bitmap = await createImageBitmap(file);
       const { canvas, meta } = await removeWatermarkFromImage(bitmap);
       bitmap.close?.();
-      const blob = await new Promise(resolve => canvas.toBlob(resolve, 'image/png'));
+      const blob = typeof canvas.convertToBlob === 'function'\n        ? await canvas.convertToBlob({ type: 'image/png' })\n        : await new Promise(resolve => canvas.toBlob(resolve, 'image/png'));
       if (!blob) throw new Error('Could not export the processed image.');
       const url = URL.createObjectURL(blob);
       const outputName = file.name.replace(/\.[^.]+$/, '') + '-cleaned.png';
