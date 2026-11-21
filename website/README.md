@@ -6,7 +6,7 @@ This folder contains the independent public frontend for the forked Gemini water
 
 ```bash
 pnpm install --frozen-lockfile
-pnpm build:site
+pnpm build && rm -f dist/onnxruntime/ort-wasm-simd-threaded.jsep.mjs dist/onnxruntime/ort-wasm-simd-threaded.jsep.wasm && node website/build-site.mjs
 ```
 
 The Cloudflare Pages output directory is `site-dist`.
