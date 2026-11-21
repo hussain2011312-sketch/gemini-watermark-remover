@@ -1,4 +1,4 @@
-import { cpSync, existsSync, mkdirSync, rmSync } from 'node:fs';
+import { cpSync, existsSync, mkdirSync, rmSync, writeFileSync } from 'node:fs';
 import { build } from 'esbuild';
 
 const out = 'site-dist';
@@ -25,4 +25,4 @@ for (const folder of ['models', 'onnxruntime']) {
   const source = 'dist/' + folder;
   if (existsSync(source)) cpSync(source, out + '/' + folder, { recursive: true });
 }
-console.log('Website built into site-dist/');
+writeFileSync(out + '/_headers', `/*\n  Cross-Origin-Opener-Policy: same-origin\n  Cross-Origin-Embedder-Policy: require-corp\n  Cross-Origin-Resource-Policy: same-origin\n`);\nconsole.log('Website built into site-dist/');
