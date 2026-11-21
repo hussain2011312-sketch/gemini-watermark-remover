@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0d12">
+  <title>AI Watermark Remover — Remove Gemini Image Watermarks Online</title>
+  <meta name="description" content="Remove visible Gemini AI watermarks from images in your browser. Batch process images, compare results, and download cleaned files.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://YOUR-DOMAIN/">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="AI Watermark Remover home"><span class="brand-mark">✦</span><span>AI Watermark <b>Remover</b></span></a>
+    <nav><a href="#tool">Image tool</a><a href="/video-preview.html">Video tool</a><a href="#how">How it works</a></nav>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle theme">◐</button>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="eyebrow"><span class="pulse"></span> PRIVATE · IN-BROWSER PROCESSING</div>
+      <h1>Clean images.<br><span>No complicated steps.</span></h1>
+      <p class="hero-copy">Remove visible watermarks from supported Gemini-generated images. Your files stay on your device while they are processed.</p>
+      <div class="hero-pills"><span>✓ No account required</span><span>✓ Local processing</span><span>✓ Batch image support</span></div>
+    </section>
+    <section class="workspace" id="tool">
+      <div class="workspace-head">
+        <div><p class="section-kicker">IMAGE WATERMARK REMOVER</p><h2>Upload your images</h2><p class="muted">PNG, JPEG and WebP · Select multiple files to process a batch</p></div>
+        <span class="local-badge"><span></span> Files stay local</span>
+      </div>
+      <label class="dropzone" id="dropzone" for="fileInput">
+        <input id="fileInput" type="file" accept="image/png,image/jpeg,image/webp" multiple hidden>
+        <span class="upload-icon">↑</span>
+        <strong>Drop images here</strong>
+        <span>or <u>browse files</u> from your device</span>
+        <small>Choose Gemini-generated images with a visible watermark</small>
+      </label>
+      <div class="queue-wrap" id="queueWrap" hidden>
+        <div class="queue-head"><strong id="queueCount">0 images selected</strong><button class="text-button" id="clearBtn" type="button">Clear all</button></div>
+        <div id="queue" class="queue"></div>
+        <div class="actions"><button id="processBtn" class="primary-btn" type="button">Remove watermarks <span>→</span></button><button id="zipBtn" class="secondary-btn" type="button" disabled>Download all as ZIP</button></div>
+        <p id="status" class="status" role="status" aria-live="polite"></p>
+      </div>
+      <div class="result-grid" id="results"></div>
+    </section>
+    <section class="video-callout">
+      <div><p class="section-kicker">VIDEO WATERMARK REMOVER</p><h2>Working with a Gemini video?</h2><p class="muted">Open the video processing workspace for video detection, cleanup and export.</p></div>
+      <a class="secondary-btn link-btn" href="/video-preview.html">Open video tool <span>↗</span></a>
+    </section>
+    <section class="how" id="how"><p class="section-kicker">SIMPLE BY DESIGN</p><h2>How it works</h2><div class="steps"><article><span>01</span><h3>Choose your files</h3><p>Select one image or a whole batch of supported Gemini images.</p></article><article><span>02</span><h3>Process locally</h3><p>The browser runs the removal engine on your device. Images are not uploaded to a server.</p></article><article><span>03</span><h3>Review and save</h3><p>Compare the original and result, then download individual files or a ZIP.</p></article></div></section>
+    <section class="notice"><strong>Important</strong><p>This tool is designed for supported visible Gemini watermarks. It does not remove invisible SynthID or guarantee correct results for unrelated watermarks. Only remove watermarks when you have the rights and permission to modify the content.</p></section>
+  </main>
+  <footer><a class="brand" href="/"><span class="brand-mark">✦</span><span>AI Watermark <b>Remover</b></span></a><span>Independent tool · Not affiliated with Google or Gemini</span></footer>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
