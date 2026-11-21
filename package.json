@@ -182,8 +182,7 @@
     "export:allenk-fdncnn-onnx": "node scripts/export-allenk-fdncnn-onnx.js",
     "smoke:allenk-fdncnn-onnx-runtime": "node scripts/smoke-allenk-fdncnn-onnx-runtime.js",
     "report:allenk-fdncnn-browser-spike": "node scripts/create-allenk-fdncnn-browser-spike-report.js",
-    "report:allenk-fdncnn-runtime-seam": "node scripts/create-allenk-fdncnn-runtime-seam-report.js",
-    "build:site": "pnpm build && rm -f dist/onnxruntime/ort-wasm-simd-threaded.jsep.mjs dist/onnxruntime/ort-wasm-simd-threaded.jsep.wasm && node website/build-site.mjs"
+    "report:allenk-fdncnn-runtime-seam": "node scripts/create-allenk-fdncnn-runtime-seam-report.js"
   },
   "peerDependencies": {
     "sharp": "^0.34.5 || ^0.35.0"
