@@ -19,5 +19,5 @@ jobs:
           node-version: 22
           cache: pnpm
       - run: pnpm install --frozen-lockfile
-      - run: pnpm build:site
+      - run: pnpm build && rm -f dist/onnxruntime/ort-wasm-simd-threaded.jsep.mjs dist/onnxruntime/ort-wasm-simd-threaded.jsep.wasm && node website/build-site.mjs
       - run: test -f site-dist/index.html && test -f site-dist/app.js && test -f site-dist/video-preview.html && test -f site-dist/video-app.js
